@@ -17,3 +17,4 @@
 ### Phase 4 — Verifiable Credentials (W3C VC, SD-JWT) 📋
 ### Phase 5 — Digital Signatures & Key Management 📋
 ### Phase 6 — Revocation, Audit & Privacy (ZKP) 📋
+![CI](https://github.com/cherif1981/algerian-digital-id/actions/workflows/ci.yml/badge.svg)
