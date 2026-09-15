@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Algerian Digital ID{% endblock %}</title>
+
+<!-- External stylesheet (cached-busted) -->
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=3">
+
+<!-- Inline CSS partials -->
+<style>
+  {% include "styles/reset.css.html" %}
+  {% include "styles/layout.css.html" %}
+  {% include "styles/components.css.html" %}
+  {% include "styles/nfc.css.html" %}
+</style>

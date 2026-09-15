@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Login - Algerian Digital ID{% endblock %}
+
+{% block content %}
+<section class="login-wrap">
+  <form method="POST" class="login-form" novalidate>
+    {{ form.hidden_tag() }}
+
+    <h2>Sign in</h2>
+
+    <label for="email">Email</label>
+    {{ form.email(id="email", placeholder="admin@example.com") }}
+    {% for err in form.email.errors %}
+      <small class="err">{{ err }}</small>
+    {% endfor %}
+
+    <label for="password">Password</label>
+    {{ form.password(id="password", placeholder="••••••••") }}
+    {% for err in form.password.errors %}
+      <small class="err">{{ err }}</small>
+    {% endfor %}
+
+    {{ form.submit(class="btn primary full") }}
+  </form>
+
+  <p class="hint">
+    <strong>Demo:</strong> admin@example.com / admin
+  </p>
+</section>
+{% endblock %}

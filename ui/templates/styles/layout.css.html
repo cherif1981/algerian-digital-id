@@ -1,0 +1,105 @@
+/* ============================================
+   Topbar
+   ============================================ */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 32px;
+  background: #0b5d3b;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.brand a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.3px;
+}
+.nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.92;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+.nav a:hover { opacity: 1; text-decoration: underline; }
+.nav .user {
+  opacity: 0.75;
+  font-size: 0.85rem;
+  padding-inline-start: 8px;
+  border-inline-start: 1px solid rgba(255,255,255,0.25);
+}
+.btn-logout { color: #ffe0e0; }
+
+/* ============================================
+   Container
+   ============================================ */
+.container {
+  flex: 1;
+  padding: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ============================================
+   Hero
+   ============================================ */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  color: #0b5d3b;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.hero p {
+  color: #4a5568;
+  margin-bottom: 28px;
+  font-size: 1.1rem;
+}
+.hero .actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #a0aec0;
+  font-size: 0.85rem;
+  border-top: 1px solid #edf2f7;
+}
+
+/* ============================================
+   Flashes
+   ============================================ */
+.flashes { margin-bottom: 20px; }
+.flash {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+.flash-success { background: #c6f6d5; color: #22543d; }
+.flash-danger, .flash-error { background: #fed7d7; color: #742a2a; }
+.flash-warning { background: #feebc8; color: #7b341e; }
+.flash-info { background: #bee3f8; color: #2a4365; }

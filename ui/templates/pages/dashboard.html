@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - Algerian Digital ID{% endblock %}
+
+{% block content %}
+<h1>Dashboard</h1>
+
+<section class="stats">
+  <div class="stat-card">
+    <div class="stat-value">{{ stats.users_total }}</div>
+    <div class="stat-label">Users</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">{{ stats.credentials_issued }}</div>
+    <div class="stat-label">Credentials Issued</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">{{ stats.verifications_today }}</div>
+    <div class="stat-label">Verifications Today</div>
+  </div>
+  <div class="stat-card danger">
+    <div class="stat-value">{{ stats.failed_logins_today }}</div>
+    <div class="stat-label">Failed Logins</div>
+  </div>
+</section>
+
+<section class="events">
+  <h2>Recent Events</h2>
+  <table>
+    <thead>
+      <tr><th>Time</th><th>Event</th><th>User</th></tr>
+    </thead>
+    <tbody>
+      {% for e in events %}
+      <tr>
+        <td>{{ e.time }}</td>
+        <td>{{ e.event }}</td>
+        <td><code>{{ e.user }}</code></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

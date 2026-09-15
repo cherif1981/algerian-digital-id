@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Sessions - Algerian Digital ID{% endblock %}
+
+{% block content %}
+<h1>Active Sessions</h1>
+
+<table class="sessions-table">
+  <thead>
+    <tr><th>JTI</th><th>Device</th><th>IP</th><th>Created</th><th></th></tr>
+  </thead>
+  <tbody>
+    {% for s in sessions %}
+    <tr>
+      <td><code>{{ s.id }}</code></td>
+      <td>{{ s.device }}</td>
+      <td>{{ s.ip }}</td>
+      <td>{{ s.created }}</td>
+      <td>
+        <button class="btn small danger" data-jti="{{ s.id }}">Revoke</button>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

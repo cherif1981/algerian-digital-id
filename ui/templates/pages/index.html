@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Home - Algerian Digital ID{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h1>Algerian Digital ID</h1>
+  <p>نظام الهوية الرقمية الجزائرية - واجهة تجريبية</p>
+  <div class="actions">
+    {% if current_user %}
+      <a href="{{ url_for('dashboard') }}" class="btn primary">Go to Dashboard</a>
+    {% else %}
+      <a href="{{ url_for('login') }}" class="btn primary">Login</a>
+    {% endif %}
+  </div>
+</section>
+
+<section class="features">
+  <div class="card">
+    <h3>Issuance</h3>
+    <p>إصدار بطاقات الهوية الرقمية</p>
+  </div>
+  <div class="card">
+    <h3>Verification</h3>
+    <p>التحقق من صحة الوثائق</p>
+  </div>
+  <div class="card">
+    <h3>SD-JWT</h3>
+    <p>Selective Disclosure JWT</p>
+  </div>
+</section>
+{% endblock %}

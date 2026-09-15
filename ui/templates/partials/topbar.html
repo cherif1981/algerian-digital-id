@@ -1,0 +1,16 @@
+<header class="topbar">
+    <div class="brand">
+      <a href="{{ url_for('index') }}">Algerian Digital ID</a>
+    </div>
+    <nav class="nav">
+      {% if current_user %}
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('sessions_list') }}">Sessions</a>
+        <a href="{{ url_for('enroll_page') }}">Read Card</a>
+        <span class="user">{{ current_user.email }}</span>
+        <a href="{{ url_for('logout') }}" class="btn-logout">Logout</a>
+      {% else %}
+        <a href="{{ url_for('login') }}" class="btn-login">Login</a>
+      {% endif %}
+    </nav>
+  </header>

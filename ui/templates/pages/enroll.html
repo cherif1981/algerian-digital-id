@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Read Card - Algerian Digital ID{% endblock %}
+
+{% block content %}
+<section class="enroll-wrap">
+
+  <h1 class="enroll-title">Read Your ID Card</h1>
+  <p class="enroll-subtitle">
+    Place your national ID card (CNIBE) on the contactless reader
+  </p>
+
+  <div class="nfc-reader" id="nfcReader">
+    <div class="nfc-pulse"></div>
+    <div class="nfc-pulse delay-1"></div>
+    <div class="nfc-pulse delay-2"></div>
+
+    <div class="nfc-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+        <rect x="8" y="16" width="48" height="32" rx="4"
+              stroke="currentColor" stroke-width="2.5"/>
+        <rect x="14" y="24" width="10" height="8" rx="1.5"
+              fill="currentColor" opacity="0.3"/>
+        <path d="M38 22 Q44 32 38 42" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.9"/>
+        <path d="M44 18 Q52 32 44 46" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+        <path d="M50 14 Q60 32 50 50" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.35"/>
+      </svg>
+    </div>
+
+    <div class="nfc-label">Contactless</div>
+  </div>
+
+  <div class="enroll-actions">
+    <a href="https://macnibe.interieur.gov.dz/wfreadcardfr.aspx"
+       target="_blank"
+       rel="noopener"
+       class="btn primary large"
+       id="openReaderBtn">
+      Open Official Reader Portal
+    </a>
+
+    <button class="btn secondary large" id="showStepsBtn">
+      How to read the card?
+    </button>
+  </div>
+
+  <div class="steps-modal" id="stepsModal" hidden>
+    <div class="steps-content">
+      <h3>Steps to read your card</h3>
+      <ol class="steps-list">
+        <li><span class="step-num">1</span>Connect a contactless smart card reader to your PC.</li>
+        <li><span class="step-num">2</span>Install the <strong>DzaEidCard</strong> plugin from the ministry portal.</li>
+        <li><span class="step-num">3</span>Click "Open Official Reader Portal".</li>
+        <li><span class="step-num">4</span>Place your card on the reader and wait for the data.</li>
+        <li><span class="step-num">5</span>Copy the data and return here to continue.</li>
+      </ol>
+
+      <div class="steps-warning">
+        ⚠️ <strong>Note:</strong> Reading the chip requires a physical reader and the official plugin.
+      </div>
+
+      <button class="btn secondary" id="closeStepsBtn">Close</button>
+    </div>
+  </div>
+
+</section>
+{% endblock %}

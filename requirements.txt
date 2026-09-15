@@ -1,47 +1,9 @@
-# Core
-numpy>=1.24.0
-pandas>=2.0.0
-pillow>=10.0.0
-opencv-python>=4.8.0
-scikit-image>=0.22.0
-
-# OCR
-pytesseract>=0.3.10
-paddleocr>=2.7.0
-paddlepaddle>=2.5.0
-
-# Matching & Validation
-rapidfuzz>=3.5.0
-python-Levenshtein>=0.23.0
-
-# Web API
-fastapi>=0.104.0
-uvicorn[standard]>=0.24.0
-python-multipart>=0.0.6
-
-# Config & Utils
-pyyaml>=6.0
-python-dotenv>=1.0.0
-pydantic>=2.5.0
-loguru>=0.7.2
-
-# ML / Training
-torch>=2.1.0
-torchvision>=0.16.0
-transformers>=4.35.0
-
-# Data Versioning
-dvc>=3.30.0
-
-# Dev & Testing
-pytest>=7.4.0
-pytest-cov>=4.1.0
-black>=23.11.0
-isort>=5.12.0
-flake8>=6.1.0
-mypy>=1.7.0
-pre-commit>=3.5.0
-
-# Documentation
-mkdocs>=1.5.0
-mkdocs-material>=9.4.0
+# ============================================
+# UI (Flask)
+# ============================================
+Flask==2.2.5
+Flask-WTF==1.0.1
+WTForms==3.0.1
+Jinja2==3.1.2
+Werkzeug==2.2.3
+itsdangerous==2.1.2

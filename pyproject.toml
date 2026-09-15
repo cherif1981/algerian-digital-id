@@ -1,32 +1,73 @@
 [build-system]
-requires = ["setuptools>=68.0", "wheel"]
+requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "algerian-digital-id"
 version = "0.1.0"
-description = "نظام التعرف الضوئي على البطاقة الوطنية الجزائرية"
-readme = "README.md"
-requires-python = ">=3.10"
-license = {text = "MIT"}
-authors = [
-    {name = "Your Name", email = "you@example.com"}
-]
+description = "Algerian Digital ID system"
+requires-python = ">=3.7"
 
-[tool.black]
-line-length = 100
-target-version = ['py310']
-
-[tool.isort]
-profile = "black"
-line_length = 100
-
+# ============================================================
+# Pytest
+# ============================================================
 [tool.pytest.ini_options]
+asyncio_mode = "auto"
 testpaths = ["tests"]
 python_files = ["test_*.py"]
-addopts = "--cov=src --cov-report=html --cov-report=term"
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-ra --strict-markers"
+markers = [
+    "asyncio: async tests",
+    "slow: slow tests",
+]
 
+# ============================================================
+# Black
+# ============================================================
+[tool.black]
+line-length = 100
+target-version = ["py37"]
+
+# ============================================================
+# isort
+# ============================================================
+[tool.isort]
+profile = "black"
+line-length = 100
+
+# ============================================================
+# Ruff
+# ============================================================
+[tool.ruff]
+line-length = 100
+target-version = "py37"
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
+
+# ============================================================
+# Mypy
+# ============================================================
 [tool.mypy]
-python_version = "3.10"
-warn_return_any = true
+python_version = "3.7"
 ignore_missing_imports = true
+warn_unused_ignores = false
+
+# ============================================================
+# Coverage
+# ============================================================
+[tool.coverage.run]
+source = ["app", "src"]
+omit = [
+    "*/tests/*",
+    "*/__pycache__/*",
+    "*/__init__.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+]

@@ -1,29 +1,19 @@
-# Algerian Digital ID 🆔
+# Algerian National ID — Document Intelligence & Verification
 
-نظام التعرف الضوئي (OCR) على البطاقة الوطنية الجزائرية
-لاستخراج البيانات والتحقق منها تلقائياً.
+> **Status:** Phase 1 — Document Intelligence (OCR + Validation)
+> **Vision:** Evolving into a full Digital Identity Platform
 
-## ✨ الميزات
+## Current Capabilities (v0.x)
+- ✅ OCR (Arabic/French) on Algerian National ID
+- ✅ Field validation (NIN, dates, names)
+- ✅ Fuzzy matching against reference DB
+- ✅ FastAPI REST + Docker
 
-- 🔍 استخراج النص من صور البطاقة (عربي/فرنسي)
-- 🧹 تنظيف الصور ومعالجتها مسبقاً
-- ✅ التحقق من صحة الحقول (NIN, تواريخ, أسماء)
-- 🔗 المطابقة الضبابية مع قواعد بيانات مرجعية
-- 🌐 REST API باستخدام FastAPI
-- 🐳 Docker للتشغيل السريع
+## Roadmap to Digital Identity Platform
 
-## 🚀 البدء السريع
-
-### المتطلبات
-- Python 3.10+
-- Tesseract OCR (مع اللغات: ara, fra, eng)
-
-### التثبيت
-```bash
-git clone https://github.com/YOUR_USERNAME/algerian-digital-id.git
-cd algerian-digital-id
-python -m venv .venv
-source .venv/bin/activate  # Linux/macOS
-# أو: .venv\Scripts\activate  # Windows
-pip install -r requirements.txt
-cp .env.example .env
+### Phase 1 — Document Intelligence ✅
+### Phase 2 — Identity Enrollment & Store 🔜
+### Phase 3 — Authentication (MFA/WebAuthn) 📋
+### Phase 4 — Verifiable Credentials (W3C VC, SD-JWT) 📋
+### Phase 5 — Digital Signatures & Key Management 📋
+### Phase 6 — Revocation, Audit & Privacy (ZKP) 📋
